@@ -1,0 +1,7 @@
+DEB_BUILD_OPTIONS ?= parallel=$(shell nproc)
+CUSTOM_DEBUILD_ENV = DEB_BUILD_OPTIONS='$(DEB_BUILD_OPTIONS)' \
+	DEB_HOST_ARCH=arm64 \
+	CC=gcc \
+	CXX=g++ \
+	CFLAGS='-O2 -g -march=armv8.2-a' \
+	CXXFLAGS='-O2 -g -march=armv8.2-a -std=gnu++17'

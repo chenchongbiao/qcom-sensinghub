@@ -1,0 +1,20 @@
+# This is the first Debian revision of the package in the Radxa archive;
+# project packaging is not tied to a Debian BTS issue.
+initial-upload-closes-no-bugs
+
+# Upstream intentionally ships the API, session, and utility SONAMEs as one
+# tightly-coupled Sensing Hub runtime package.
+package-name-doesnt-match-sonames
+
+# This package ships arch-dependent content (an arm64 executable plus shared
+# libraries under the multiarch triplet directory) while being declared
+# Architecture: all for consistency with the other Radxa packaging
+# repositories. Every tag below follows from that single mismatch, so they are
+# suppressed together. Switching the package to Architecture: arm64 is the
+# alternative, but that diverges from the Radxa template.
+arch-independent-package-contains-binary-or-object
+triplet-dir-and-architecture-mismatch
+unstripped-binary-or-object
+no-shlibs
+lacks-ldconfig-trigger
+undeclared-elf-prerequisites

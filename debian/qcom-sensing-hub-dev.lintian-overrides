@@ -1,0 +1,8 @@
+# This is the first Debian revision of the package in the Radxa archive;
+# project packaging is not tied to a Debian BTS issue.
+initial-upload-closes-no-bugs
+
+# See qcom-sensing-hub.lintian-overrides: this package is declared
+# Architecture: all but ships unversioned library links under the multiarch
+# triplet directory.
+triplet-dir-and-architecture-mismatch
